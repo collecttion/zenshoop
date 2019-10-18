@@ -1,0 +1,39 @@
+extends ../layout/manager
+
+block conten
+  .wrapper
+    .main-panel
+      // Navbar
+      nav.navbar.navbar-light.bg-light
+        a.navbar-brand(href='#')
+          img.d-inline-block.align-top(src='/img/logo.jpg', width='40', height='40', alt='')
+          |    3Color
+
+      // End Navbar
+      .content
+        .container-fluid
+          .row
+            .col-md-8
+              .card
+                .card-header
+                  h4.card-title Edit Text
+                .card-body
+                  form(action="/uploads" + post.id, method="POST", enctype="multipart/form-data")
+                    .row
+                      .col-md-12
+                        .form-group
+                          label(for="date") 
+                          input#date.form-control(type='hidden' name="_method" value ="PUT" )
+                    .row
+                      .col-md-4.pr-1
+                        .form-group
+                          label(for="name") Name
+                          input#name.form-control(type="text" name="name" value = post.name)
+                    .row
+                      .col-md-12
+                        .form-group
+                          label(for="conten") Conten
+                           textarea.form-control(rows='4', cols='80' type="text" name="conten" value="" )= post.conten
+                    button.btn.btn-info.btn-fill.pulsl-right(type='submit') Edit Text
+                    .clearfix
+            

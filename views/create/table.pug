@@ -1,0 +1,137 @@
+extends ../layout/manager
+
+block conten
+  .wrapper
+    .sidebar(data-image='../assets/img/sidebar-5.jpg')
+      .sidebar-wrapper
+        .logo
+          a.simple-text(href='http://www.creative-tim.com')
+            | Creative Tim
+        ul.nav
+          li
+            a.nav-link(href='dashboard.html')
+              i.fas.fa-chart-line
+              p Dashboard
+          li
+            a.nav-link(href='/create')
+              i.far.fa-user-circle
+              p User Profile
+          li.nav-item.active
+            a.nav-link(href='table')
+              i.fas.fa-receipt
+              p Table List
+          li
+            a.nav-link(href='./typography.html')
+              i.fab.fa-typo3
+              p Typography
+          li
+            a.nav-link(href='./icons.html')
+              i.fab.fa-react
+              p Icons
+          li
+            a.nav-link(href='./maps.html')
+              i.fas.fa-map-marker-alt
+              p Maps
+          li
+            a.nav-link(href='./notifications.html')
+              i.far.fa-bell
+              p Notifications
+          li.nav-item.active.active-pro
+            a.nav-link.active(href='upgrade.html')
+              i.fab.fa-superpowers
+              p Upgrade to PRO
+    .main-panel
+      // Navbar
+      nav.navbar.navbar-expand-lg(color-on-scroll='500')
+        .container-fluid
+          a.navbar-brand(href='#pablo')  Table List 
+          button.navbar-toggler.navbar-toggler-right(href='', type='button', data-toggle='collapse', aria-controls='navigation-index', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-bar.burger-lines
+            span.navbar-toggler-bar.burger-lines
+            span.navbar-toggler-bar.burger-lines
+          #navigation.collapse.navbar-collapse.justify-content-end
+            ul.nav.navbar-nav.mr-auto
+              li.nav-item
+                a.nav-link(href='#', data-toggle='dropdown')
+                  i.nc-icon.nc-palette
+                  span.d-lg-none Dashboard
+              li.dropdown.nav-item
+                a.dropdown-toggle.nav-link(href='#', data-toggle='dropdown')
+                  i.nc-icon.nc-planet
+                  span.notification 5
+                  span.d-lg-none Notification
+                ul.dropdown-menu
+                  a.dropdown-item(href='#') Notification 1
+                  a.dropdown-item(href='#') Notification 2
+                  a.dropdown-item(href='#') Notification 3
+                  a.dropdown-item(href='#') Notification 4
+                  a.dropdown-item(href='#') Another notification
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nc-icon.nc-zoom-split
+                  span.d-lg-block &nbsp;Search
+            ul.navbar-nav.ml-auto
+              li.nav-item
+                a.nav-link(href='#pablo')
+                  span.no-icon Account
+              li.nav-item.dropdown
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  span.no-icon Dropdown
+                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something
+                  a.dropdown-item(href='#') Something else here
+                  .divider
+                  a.dropdown-item(href='#') Separated link
+              li.nav-item
+                a.nav-link(href='#pablo')
+                  span.no-icon Log out
+
+      // End Navbar
+      .content
+        .container-fluid
+          .row
+            .col-md-12
+              .card.card-plain.table-plain-bg
+                .card-header
+                  h4.card-title Các bài đã đăng
+                  p.card-category Here is a subtitle for this table
+                .card-body.table-full-width.table-responsive
+                  table.table.table-hover
+                    thead
+                      th ID
+                      th Name
+                      th Ngày
+                      th Edit
+                      th Xóa bài
+                    tbody
+                    each posts in post
+                      tr
+                        td=posts._id
+                        td=posts.name
+                        td
+                        td
+                          button.btn.btn-danger
+                              a(href="/create/table/edit" + posts.id ) Edit
+                        td
+                          button.btn.btn-danger
+                              a(href="/create/table" + posts.id ) x
+      footer.footer
+        .container-fluid
+          nav
+            ul.footer-menu
+              li
+                a(href='#')
+                  | Home
+              li
+                a(href='#')
+                  | Company
+              li
+                a(href='#')
+                  | Portfolio
+              li
+                a(href='#')
+                  | Blog
+            p.copyright.text-center
+              | &copy;

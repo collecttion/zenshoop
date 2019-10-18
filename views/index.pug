@@ -1,0 +1,518 @@
+extends ./layout/homeComon
+
+block conten
+    .container
+        // navbar
+        nav.navbar.navbar-expand-lg.navbar-light.sticky-top
+          a.navbar-brand.display-4.font-weight-bold(href='#') ZenShop
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+            ion-icon(name='menu')
+          #navbarNav.collapse.navbar-collapse
+            .mr-auto
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link(href='#') TECH
+              li.nav-item
+                a.nav-link(href='#') VINTAGE
+              li.nav-item
+                a.nav-link(href='#') BLOG
+              li.nav-item
+                a.nav-link.disabled(href='#')
+                  i.fas.fa-cart-plus
+              li.nav-item
+                a.nav-link.disabled(href='#')
+                  ion-icon(name='list')
+        // baner
+        .container
+          .row.header
+            .col-xl-12
+              .baner
+                img.img-fluid(src='https://179324-566621-raikfcquaxqncofqfm.stackpathdns.com/zeen-shop/wp-content/uploads/sites/15/2018/08/zeen-shop-1.jpg', alt='Responsive image')
+                .row.pt-6.m-4
+                  .col-xl-6.col-lg-7.col-md-7
+                    p.font-weight-bold LATEST COLLECTION
+                    h1.display-4 LIMITED EDITION COLLECTION &apos;19
+                    p.repon
+                      | Brighten up your life with the limited edition &apos;19 collection inspired by the Bauhaus movement. Woozeen exclusive.
+                  .col-xl-6.col-lg-5.col-md-5
+                .row.m-4.pb-6
+                  .col-xl-3.col-lg-4.col-md-5.colection
+                    button.btn.btn-prin(type='button')
+                      strong
+                        span Views Colection
+                      i.fas.fa-arrow-right
+                  .col-xl-9.col-lg-8.col-md-7
+                    button.btn.link.font-weight-bold(type='button')
+                      i.fas.fa-play.fa-xs.play-css
+                      | Watch trailer
+        main
+          .container
+            .row
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img1
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+            .row
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+            .row
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+              .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                .product.product-img2
+                  // Button trigger modal
+                  .view
+                    button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
+                      i.far.fa-eye.m-3
+                  // Modal
+                  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+                    .modal-dialog.modal-dialog-centered(role='document')
+                      .modal-content
+                        .modal-body
+                          .container
+                            .row
+                              .col-xl-6.col-lg-6.col-md-6.img-view
+                                img.img-fluid(src='https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg', alt='Responsive image')
+                              .col-xl-6.col-lg-6.col-md-6
+                                .modal-footer
+                                  button.btn.btn-dark(type='button', data-dismiss='modal') X
+                                .start-view
+                                  p Accessories
+                                  h1 Pine Clock
+                                  p
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star-half
+                                    i.far.fa-star
+                                    span.display-9 (1 customer review)
+                                  p.repon
+                                    | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
+                                  .form-footer.float-none
+                                    p.footer-p-size
+                                      button.btn(type='button')
+                                        strong
+                                          span Add To Cart&#x9;
+                                        i.fas.fa-arrow-right
+                                hr
+                  a(href='')
+                    .cart.ml-1
+                      i.fas.fa-cart-plus.m-3
+                p Metallic Case
+                p $180.00
+            .row
+              .col-xl-12
+                p.text-center.read-load
+                  a(href='/post')
+                    button.btn.btn-prin(type='button') Road More
+          // footer
+          .container
+            .row
+              .col-xl-12
+                p.display-4 Blog Latest
+            .row
+              .col-xl-6.col-lg-6.col-md-6.col-sm-6
+                .footer-img1.p-5
+                  p sirdow width in maria clock
+              .col-xl-6.col-lg-6.col-md-6.col-sm-6
+                .footer-img2.p-5
+                  p sirdow width in maria clock
+          .container.pt-5
+            .row
+              .col-xl-6.col-lg-7.col-md-8
+                .row.font-footer
+                  .col-xl-3.col-lg-3.col-md-3
+                    p.pb-3 Quicklinks
+                    p
+                      a(href='') My account
+                    p
+                      a(href='') Checkout
+                    p
+                      a(href='') Cart
+                    p
+                      a(href='') Terms
+                    p
+                      a(href='') Home
+                  .col-xl-3.col-lg-3.col-md-3
+                    p.pb-3 Follow Us
+                    p
+                      a(href='') Facebook
+                    p
+                      a(href='') Twitter
+                    p
+                      a(href='') Pinterest
+                    p
+                      a(href='') Instagram
+                    p
+                      a(href='') Youtube
+                  .col-xl-3.col-lg-3.col-md-3
+                    p.pb-3 About Us
+                    p
+                      a(href='') Contact
+                    p
+                      a(href='') Contact
+                    p
+                      a(href='') Terms
+                    p
+                      a(href='') Privacy Policy
+                    p
+                      a(href='') Checkout
+              .col-xl-6.col-lg-5.col-md-4
+                .row
+                  .col-xl-12
+                    .form-footer
+                      p.footer-p-size Sign up to get 10% off your first order
+                      p
+                        input.form-control.float-right(type='email', placeholder='Enter email')
+                      br
+                      br
+                      p.footer-p-size
+                        button.btn(type='button')
+                          strong
+                            span Subcribe
+                          i.fas.fa-arrow-right
+          .container.pt-5.pb-5
+            .row
+              .col-xl-12
+                .end
+                  p Copyright 2019 ThanhTuan. All Rights Reserved.
+        footer
+            script(type='text/javascript').
+              var scroll1 = window.pageYOffset;
+              window.onscroll = function(){
+              var scroll2 = window.pageYOffset;
+              if (scroll1 > scroll2) {
+              document.querySelector('nav').style.top = "0";
+              }else{
+              document.querySelector('nav').style.top = "-100px";
+              }
+              scroll1 = scroll2;
+              }

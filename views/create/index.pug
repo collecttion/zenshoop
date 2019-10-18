@@ -1,0 +1,167 @@
+extends ../layout/manager
+
+block conten
+  if errors
+    each error in errors
+      .alert.alert-danger=error
+  .wrapper
+    .sidebar(data-image='')
+      .sidebar-wrapper
+        .logo
+          a.simple-text(href='')
+            | Creative Tim
+        ul.nav
+          li
+            a.nav-link(href='')
+              i.fas.fa-chart-line
+              p Dashboard
+          li.nav-item.active
+            a.nav-link(href='/create')
+              i.far.fa-user-circle
+              p User Profile
+          li
+            a.nav-link(href='/create/table')
+              i.fas.fa-receipt
+              p Table List
+          li
+            a.nav-link(href='typography')
+              i.fab.fa-typo3
+              p Typography
+          li
+            a.nav-link(href='icons')
+              i.fab.fa-react
+              p Icons
+          li
+            a.nav-link(href='maps')
+              i.fas.fa-map-marker-alt
+              p Maps
+          li
+            a.nav-link(href='notificationsl')
+              i.far.fa-bell
+              p Notifications
+          li.nav-item.active.active-pro
+            a.nav-link.active(href='upgrade')
+              i.fab.fa-superpowers
+              p Upgrade to PRO
+    .main-panel
+      // Navbar
+      nav.navbar.navbar-expand-lg(color-on-scroll='500')
+        .container-fluid
+          a.navbar-brand(href='#pablo')  Table List 
+          button.navbar-toggler.navbar-toggler-right(href='', type='button', data-toggle='collapse', aria-controls='navigation-index', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-bar.burger-lines
+            span.navbar-toggler-bar.burger-lines
+            span.navbar-toggler-bar.burger-lines
+          #navigation.collapse.navbar-collapse.justify-content-end
+            ul.nav.navbar-nav.mr-auto
+              li.nav-item
+                a.nav-link(href='#', data-toggle='dropdown')
+                  i.nc-icon.nc-palette
+                  span.d-lg-none Dashboard
+              li.dropdown.nav-item
+                a.dropdown-toggle.nav-link(href='#', data-toggle='dropdown')
+                  i.nc-icon.nc-planet
+                  span.notification 5
+                  span.d-lg-none Notification
+                ul.dropdown-menu
+                  a.dropdown-item(href='#') Notification 1
+                  a.dropdown-item(href='#') Notification 2
+                  a.dropdown-item(href='#') Notification 3
+                  a.dropdown-item(href='#') Notification 4
+                  a.dropdown-item(href='#') Another notification
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nc-icon.nc-zoom-split
+                  span.d-lg-block &nbsp;Search
+            ul.navbar-nav.ml-auto
+              li.nav-item
+                a.nav-link(href='#pablo')
+                  span.no-icon Account
+              li.nav-item.dropdown
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  span.no-icon Dropdown
+                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                  a.dropdown-item(href='#') Action
+                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') Something
+                  a.dropdown-item(href='#') Something else here
+                  .divider
+                  a.dropdown-item(href='#') Separated link
+              li.nav-item
+                a.nav-link(href='#pablo')
+                  span.no-icon Log out
+
+      // End Navbar
+      .content
+        .container-fluid
+          .row
+            .col-md-8
+              .card
+                .card-header
+                  h4.card-title Post Text
+                .card-body
+                  form(action="create", method="POST", enctype="multipart/form-data")
+                    .row
+                      .col-md-12
+                        .form-group
+                          label(for="date") Datetime
+                          input#date.form-control(type='text' name="date" value = values ? values.date:Date())
+                    .row
+                      .col-md-4.pr-1
+                        .form-group
+                          label(for="name") Name
+                          input#name.form-control(type="text" name="name" value = values ? values.name:"")
+                      .col-md-4.px-1
+                        .form-group
+                          label(for="imgeFile")
+                          input#phone.form-control.file(type="file" name="imgeFile")
+                    .row
+                      .col-md-12
+                        .form-group
+                          label(for="conten") Conten
+                          textarea.form-control(rows='4', cols='80', placeholder='Here can be your description',type="text" name="conten" value = values ? values.text:"") 
+                    button.btn.btn-info.btn-fill.pulsl-right(type='submit') Update Profile
+                    .clearfix
+            .col-md-4
+              .card.card-user
+                .card-image
+                  img(src="/img/img1.jpg")
+                .card-body
+                  .author
+                    a(href='#')
+                      img.avatar.border-gray(src='/img/bit.jpg')
+                      h5.title Thanh Tuan
+                    p.description
+                      | Thanh Tuan
+                  p.description.text-center
+                    | &quot;dasdsadsadsa
+                    br
+                    |  sdasdsad
+                    br
+                    |  I&apos;sdasdswd&quot;
+                hr
+                .button-container.mr-auto.ml-auto
+                  button.btn.btn-simple.btn-link.btn-icon(href='#')
+                    i.fa.fa-facebook-square
+                  button.btn.btn-simple.btn-link.btn-icon(href='#')
+                    i.fa.fa-twitter
+                  button.btn.btn-simple.btn-link.btn-icon(href='#')
+                    i.fa.fa-google-plus-square
+      footer.footer
+        .container-fluid
+          nav
+            ul.footer-menu
+              li
+                a(href='#')
+                  | Home
+              li
+                a(href='#')
+                  | Company
+              li
+                a(href='#')
+                  | Portfolio
+              li
+                a(href='#')
+                  | Blog
+            p.copyright.text-center
+              | &copy;

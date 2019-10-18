@@ -1,0 +1,47 @@
+extends ../layout/loginComon
+
+block conten
+	
+	if errors
+		each error in errors
+			.alert.alert-danger=error
+
+	#fullPage
+		.section.s1
+			.login-page
+				.login
+					.font-h
+						h3 Admin
+					form(method="POST")
+						.form-ground
+							label(for="email")
+								input.input-text(type='text' name='email' placeholder='Email Address' value = values ? values.email:"")
+						.form-ground
+							label(for="password")
+								input.input-text(type='password' name='password', placeholder='Password' value = values ? values.password:"")
+						.checkbox
+							input(type='checkbox')
+							| Remember
+							a(href='') for get aware
+						.form-ground
+							button(type='submit')
+								a(href='') Login
+					.font-end
+							p
+							| Don&apos;t have an account?
+							a(href='')
+									|  Register here
+				.table2-login
+						a logy
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt Lorem Ipsum
+						a#a(href='') read more
+						ul.roud
+							li
+								i.fab.fa-facebook-f.fa-lg
+							li
+								i.fab.fa-twitter.fa-lg
+							li
+								i.fab.fa-google-plus-g.fa-lg
+							li
+								i.fab.fa-instagram.fa-lg
